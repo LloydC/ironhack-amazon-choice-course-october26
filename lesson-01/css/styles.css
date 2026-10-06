@@ -4,12 +4,12 @@ body {
 }
 
 h1 {
-    color: #ffff0f;
+    color: #1bb553;
     text-align: center;
 }
 
 #container {
-    background-color: #f2f2f2;
+    background-color: #f2dbdb;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
