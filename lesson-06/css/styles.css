@@ -1,0 +1,99 @@
+@import url('https://cdn.jsdelivr.net/npm/@fontsource/clicker-script@5.3.0/index.css');
+
+html {
+    font-size: 10px;
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#hero-container {
+    width: 100vw;
+    height: 76.8rem;
+    background-image: url('../images/hero.png');
+    background-size: cover;
+    background-position: center;
+    padding-right: 9.3rem;
+    padding-left: 9.3rem;
+}
+
+nav {
+    width: 100vw;
+    height: 7.2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Playfair Display', serif;
+    
+}
+
+#nav-center {
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    list-style-type: none;
+}
+
+#nav-center > li {
+    margin-right: 6rem;
+}
+
+#nav-center > li > a {
+        text-decoration: none;
+        list-style: none;
+        color: white;
+}
+
+#nav-right {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+} 
+
+#nav-right > li {
+    margin-right: 3.5rem;
+}
+
+#nav-right > li > a {
+        text-decoration: none;
+        list-style: none;
+        color: white;
+}
+
+#hero-content {
+    width: 52.7rem;
+    display:flex;
+    flex-direction: column;
+    color: white;
+    margin-top: 11.6rem;
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+}
+
+.action-button {
+    color: black;
+    background-color: #F9C06A;
+  border: none;
+  padding: 2rem;
+  text-decoration: none;
+  font-size: 1.6rem;
+  margin: 0.4rem 0.2rem;
+  border-radius: 3.2rem;
+  height: 4.8rem;
+  min-width: 10rem;
+  max-width: 13.8rem;
+}
+
+#hero-title , #logo {
+    font-family: 'Clicker Script', cursive;
+    color: white;
+}
+
+#logo {
+    font-size: 3rem;
+}
+
+#hero-title {
+    font-size: 6rem;
+}
