@@ -140,6 +140,9 @@ for(a = 0; a < fruitsArray.length; a++){
 }
 
 console.log(`Total inventory value: €${fruitTotal}`)
+
+console.log(`${fruitTotal} years ${calculateFruitTotal(4, 5)}`)
+// `${fruitTotal} years ${calculateFruitTotal(4, 5)}`
 // 1. Display the shop name in uppercase.
 // 2. Display the number of fruit types available.
 // 3. Use a for loop to print each fruit's name and price.
@@ -158,3 +161,29 @@ console.log(`Total inventory value: €${fruitTotal}`)
 // Mango - €4 - Expensive
 
 // Total inventory value: €30
+
+// let phraseToCheck = 'A man, a plan, a canal, Panama!';
+
+// // Redigez le code pour verifier si phraseToCheck est un palindrome
+// function checkForPalindrome(){
+//     // 1. Comparer l'inverse du string initial avec le string initial
+//     // 2. Si le string initial est le meme que son inverse retourner une boolean true
+//     // 3. Si non reourner la boolean false 
+//     if(){
+
+//     }
+//     else {
+
+//     }
+// }
+
+let phrase = "This is long enough for a string to count it words";
+
+let words = phrase.split(" ");
+
+
+console.log(words);
+console.log(words[0]);
+console.log(words.length);
+console.log(typeof phrase)
+console.log(typeof words)
