@@ -60,7 +60,7 @@ console.log("sortFruits", sortFruits)
 const filterFruits = fruits.filter((fruit) =>{
     return fruit.length >= 5;
 })
-//.found() exemple
+//.find() exemple
 const foundFruit = fruits.find((element) =>{
     return  element.length >= 5
 });
