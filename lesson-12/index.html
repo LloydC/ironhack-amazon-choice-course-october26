@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DOM Practice — Task Manager</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="container">
+    <h1 id="page-title">My Task Manager</h1>
+    <p id="description">Practice creating, updating, and deleting DOM elements.</p>
+
+    <form id="task-form">
+      <label for="task-input">New task</label>
+      <div class="input-row">
+        <input id="task-input" name="task" type="text" placeholder="e.g. Practice JavaScript" required maxlength="100" />
+        <button id="add-button" type="submit">Add Task</button>
+      </div>
+    </form>
+
+    <p id="feedback" role="status" aria-live="polite"></p>
+    <h2>Tasks <span id="task-count">(2)</span></h2>
+    <ul id="task-list">
+      <li class="task" data-id="1">
+        <span class="task-text">Review JavaScript arrays</span>
+        <div class="actions">
+          <button type="button" class="complete-btn">Complete</button>
+          <button type="button" class="delete-btn">Delete</button>
+        </div>
+      </li>
+      <li class="task" data-id="2">
+        <span class="task-text">Practice DOM manipulation</span>
+        <div class="actions">
+          <button type="button" class="complete-btn">Complete</button>
+          <button type="button" class="delete-btn">Delete</button>
+        </div>
+      </li>
+    </ul>
+    <button id="clear-completed" type="button">Clear Completed</button>
+  </main>
+</body>
+</html>

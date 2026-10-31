@@ -70,6 +70,33 @@ buttons.forEach((button) => {
  
   // and for each one we add a 'click' listener
   button.addEventListener('click', () => {
-    alert(button.id);
+    // alert(button.id);
+    
   });
+});
+
+const input = document.querySelector("input");
+console.log("input", input.value)
+
+// const divContainer = document.querySelector("div#container")
+const buttonsContainer = document.querySelectorAll("div#container > button")
+console.log("buttonsContainer", buttonsContainer)
+
+function random(number) {
+  return Math.floor(Math.random() * number);
+}
+
+function setBackgroundColor(id) {
+
+  try {
+    const elements = document.querySelectorAll(`#${id}`);
+    const randomColor = `rgb(${random(255)} ${random(255)} ${random(255)})`;
+    elements[0].style.backgroundColor = randomColor;
+  } catch (e) {
+   console.log(e)
+  }
+}
+
+document.querySelector("#secondary-title").addEventListener("click", () => {
+    setBackgroundColor("secondary-title");
 });
