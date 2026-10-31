@@ -1,3 +1,35 @@
+function loadCompleteButtons(){
+    const completeButtons = document.querySelectorAll(".complete-btn");
+    completeButtons.forEach((completeButton)=> {
+        completeButton.addEventListener("click", ()=>{
+            // 1. rajouter  
+            // sur l'element span.task-text de l'element li.task
+        // Si la propriete style existe avec text-decoration, la remettre vide
+        // sinon rajoutons text-decoration: line-through
+        if(completeButton.parentElement.previousElementSibling.style.textDecoration === "line-through"){
+            completeButton.parentElement.previousElementSibling.style.textDecoration = "";
+            completeButton.innerHTML = "Complete";
+        }
+        else {
+            completeButton.parentElement.previousElementSibling.style.textDecoration = "line-through";
+            completeButton.innerHTML = "Undo";
+        }
+        })
+})
+}
+
+function loadDeleteButtons(){
+    const deleteButtons = document.querySelectorAll(".delete-btn");
+
+    deleteButtons.forEach((deleteButton)=> {
+        // Effacer la tache associée au bouton?
+    deleteButton.addEventListener("click", ()=>{
+        const parent = document.getElementById("task-list");
+        const child = deleteButton.parentNode.parentNode;
+        const throwawayNode = parent.removeChild(child);
+    })
+    })
+}
 // 1. Add event listener on Add task button
 // 2. When clicked, 
 
@@ -50,34 +82,41 @@ const ulElement = document.querySelector("#task-list")
 
 ulElement.innerHTML = ulElement.innerHTML + liElement;
 document.querySelector("#task-input").value = "";
+
+loadCompleteButtons()
+loadDeleteButtons()
 });
 
-const completeButtons = document.querySelectorAll(".complete-btn");
+const clearButton = document.querySelector("#clear-completed");
+    // Clicker sur Clear completed retire les taches qui sont complete
+clearButton.addEventListener("click", ()=>{
+// 1. Recuperer la liste de taches
+const liElements = document.querySelectorAll(".task")
 
-completeButtons.forEach((completeButton)=> {
-    completeButton.addEventListener("click", ()=>{
-        // 1. rajouter  
-        // sur l'element span.task-text de l'element li.task
-       // Si la propriete style existe avec text-decoration, la remettre vide
-       // sinon rajoutons text-decoration: line-through
-       if(completeButton.parentElement.previousElementSibling.style.textDecoration === "line-through"){
-        completeButton.parentElement.previousElementSibling.style.textDecoration = "";
-        completeButton.innerHTML = "Complete";
-       }
-       else {
-        completeButton.parentElement.previousElementSibling.style.textDecoration = "line-through";
-        completeButton.innerHTML = "Undo";
-       }
-    })
+const convertToArray = Array.from(liElements)
+
+const nonCompletedTasks = convertToArray.filter((task)=>{ // 2. Identifier celles qui sont complete
+    return task.firstElementChild.style.textDecoration === "";
 })
 
-const deleteButtons = document.querySelectorAll(".delete-btn");
+const ulElement = document.querySelector("#task-list")
+ulElement.innerHTML = "";
 
-deleteButtons.forEach((deleteButton)=> {
-    // Effacer la tache associée au bouton?
-deleteButton.addEventListener("click", ()=>{
-    const parent = document.getElementById("task-list");
-    const child = deleteButton.parentNode.parentNode;
-    const throwawayNode = parent.removeChild(child);
+nonCompletedTasks.map((nonCompletedTask)=>{
+    return `<li class="task">
+         <span class="task-text">${nonCompletedTask.childNodes[1].innerHTML}</span>
+         <div class="actions">
+           <button type="button" class="complete-btn">Complete</button>
+           <button type="button" class="delete-btn">Delete</button>
+         </div>
+       </li>`
+}).forEach((liElement) => {
+    ulElement.innerHTML = ulElement.innerHTML + liElement;
 })
+
 })
+
+window.onload = () =>{
+    loadCompleteButtons()
+    loadDeleteButtons()
+}
