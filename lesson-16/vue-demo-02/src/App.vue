@@ -3,7 +3,7 @@ import Navigation from './components/Navigation.vue'
 </script>
 
 <template>
-    <Navigation msg="Hello, Vue!" />
+    <Navigation    />
 </template>
 
 <style scoped>
