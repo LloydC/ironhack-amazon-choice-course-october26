@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "name": "Greys Vage",
+    "discount": "15",
+    "days": "6",
+    "image": "https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=700&q=85"
+  },
+  {
+    "id": 2,
+    "name": "Greys Vage",
+    "discount": "10",
+    "days": "6",
+    "image": "https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=700&q=85"
+  },
+  {
+    "id": 3,  
+    "name": "Greys Vage",
+    "discount": "25",
+    "days": "7",
+    "image": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=700&q=85"
+  },
+  {
+    "id": 4,
+    "name": "Greys Vage",
+    "discount": "20",
+    "days": "8",
+    "image": "https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=700&q=85"
+  }
+]
