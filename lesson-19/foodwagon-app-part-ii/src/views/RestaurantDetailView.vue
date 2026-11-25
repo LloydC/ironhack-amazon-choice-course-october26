@@ -5,6 +5,7 @@ import RestaurantDetail from '../components/RestaurantDetail.vue'
 import restaurantsData from '../data/restaurants.json'
 
 const route = useRoute()
+console.log('Route params:', route.params) // Log the route parameters for debugging
 const router = useRouter()
 const isDeleting = ref(false)
 const deleteError = ref('')

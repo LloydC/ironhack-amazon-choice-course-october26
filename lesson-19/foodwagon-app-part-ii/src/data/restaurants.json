@@ -97,5 +97,38 @@
     "color": "#f97316",
     "logo": "GR",
     "image": "https://plus.unsplash.com/premium_photo-1661883237884-263e8de8869b"
+  },
+  {
+    "id": 10,
+    "name": "Restaurant classe",
+    "mark": "25%",
+    "hours": "Fast",
+    "rating": "80",
+    "status": "Open Now",
+    "color": "#f97316",
+    "logo": "RC",
+    "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4"
+  },
+  {
+    "id": 11,
+    "name": "Restaurant chic",
+    "mark": "25%",
+    "hours": "Fast",
+    "rating": "89",
+    "status": "Open Now",
+    "color": "#f97316",
+    "logo": "RCH",
+    "image": "https://images.unsplash.com/photo-1783447036642-90a65ff85a0f"
+  },
+  {
+    "id": 12,
+    "name": "Restaurant Michelin",
+    "mark": "20%",
+    "hours": "Fast",
+    "rating": "76",
+    "status": "Open Now",
+    "color": "#f97316",
+    "logo": "RM",
+    "image": "https://images.unsplash.com/photo-1786209677036-1580ca1b280d"
   }
 ]

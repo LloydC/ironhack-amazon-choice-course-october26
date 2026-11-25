@@ -10,7 +10,7 @@ const loggedInUser = ref({
   name: 'John Doe',
   avatarUrl: 'https://plus.unsplash.com/premium_photo-1739786995646-480d5cfd83dc',
 })
-const loggedIn = ref(true)
+const loggedIn = ref(false)
 </script>
 
 <template>

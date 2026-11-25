@@ -25,15 +25,15 @@ const submitRestaurant = async () => {
     const response = await fetch('/api/restaurants', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(form),
-    })
+      body: JSON.stringify(form), // {name: 'test'} --> {"name": "test"}
+    }) // Send the form data to the API
 
-    if (!response.ok) {
+    if (!response.ok) { // Check if the response is not OK
       const result = await response.json()
       throw new Error(result.error || 'Unable to add restaurant')
     }
 
-    router.push('/restaurants')
+    router.push('/restaurants') // redirect to the restaurants list after successful submission
   } catch (error) {
     errorMessage.value = error.message
   } finally {
